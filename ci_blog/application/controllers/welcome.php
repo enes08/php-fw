@@ -46,16 +46,16 @@ class Welcome extends CI_Controller {
 
         public function delete_kullanici($id){
 
-
+//ilk olarak silinecek kullanıcı id isne göre kullanıcıyı getiriyoruz
       $kullanici = $this->kullanici_model->get(array("id" => $id));
-
+//kullanıcının resminin url sini alıyoruz
     $file_name = FCPATH ."resim/$kullanici->resim_url";
-
+//resmmi unlink ile kaldırıyoruz
     if(unlink($file_name)){
-
+//eğer resim dosyadan silindi ise veritabanından resmi siliyoruz
      
         $delete=$this->kullanici_model->delete(array("id"=>$id));
-
+//veritabanından silme işlemi başarıle ile gerçekleştirilirse
 if($delete){
        //gelen verileri tutacak sınıf nesnesi üretiyoruz
             $data=new stdClass();
@@ -65,15 +65,7 @@ if($delete){
               $this->load->view('welcome_message',$data);
 }
       
-    }
-
-
-
-
-
-            
-
-            
+    }     
 
         }
             public function update_kullaniciPage($id){
