@@ -6,9 +6,9 @@
   <meta charset="utf-8">
   <title>Welcome to CodeIgniter</title> 
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="<?php echo base_url("assets/bootstrap.min.css")?>">
    <script src="<?php echo base_url("assets/jquery-2.2.3.min.js")?>"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="<?php echo base_url("assets/bootstrap.min.js")?>"></script>
 
 
    <script src="<?php echo base_url("assets/bootbox.min.js")?>"></script>
